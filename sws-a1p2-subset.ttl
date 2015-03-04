@@ -1,0 +1,77 @@
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ioi: <http://stats.ioinformatics.org/resource#> .
+@prefix ioi-owl: <http://stats.ioinformatics.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ioi:contestant6597 a foaf:Person ;
+    dbpedia-owl:country dbpedia:Australia ;
+    dbpedia-owl:numberOfSilverMedalsWon 1 ;
+    ioi-owl:participatedIn ioi:ioi2014 ;
+    ioi-owl:submitted [ a ioi-owl:TaskSubmission ;
+            ioi-owl:score 100.00 ;
+            ioi-owl:task ioi:task139 ],
+        [ a ioi-owl:TaskSubmission ;
+            ioi-owl:score 30.00 ;
+            ioi-owl:task ioi:task138 ] ;
+    ioi-owl:teamNumber 1 ;
+    foaf:firstName "Ray" ;
+    foaf:lastName "Li" .
+
+ioi:contestant6604 a foaf:Person ;
+    dbpedia-owl:country dbpedia:Azerbaijan ;
+    ioi-owl:participatedIn ioi:ioi2014 ;
+    ioi-owl:submitted [ a ioi-owl:TaskSubmission ;
+            ioi-owl:score 0.00 ;
+            ioi-owl:task ioi:task138 ],
+        [ a ioi-owl:TaskSubmission ;
+            ioi-owl:score 8.00 ;
+            ioi-owl:task ioi:task139 ] ;
+    ioi-owl:teamNumber 1 ;
+    foaf:firstName "Aliagha" ;
+    foaf:lastName "Shirinov" .
+
+ioi:contestant6881 a foaf:Person ;
+    dbpedia-owl:country dbpedia:Turkmenistan ;
+    ioi-owl:participatedIn ioi:ioi2014 ;
+    ioi-owl:submitted [ a ioi-owl:TaskSubmission ;
+            ioi-owl:score 0.00 ;
+            ioi-owl:task ioi:task139 ],
+        [ a ioi-owl:TaskSubmission ;
+            ioi-owl:score 0.00 ;
+            ioi-owl:task ioi:task138 ] ;
+    ioi-owl:teamNumber 1 ;
+    foaf:firstName "Charymyrat" ;
+    foaf:lastName "Yollyyev" .
+
+ioi:task138 a ioi-owl:CompetitionTask ;
+    ioi-owl:competitionDay 1 ;
+    ioi-owl:presentedIn ioi:ioi2014 ;
+    ioi-owl:taskNumber 1 ;
+    foaf:name "Rail" .
+
+ioi:task139 a ioi-owl:CompetitionTask ;
+    ioi-owl:competitionDay 1 ;
+    ioi-owl:presentedIn ioi:ioi2014 ;
+    ioi-owl:taskNumber 2 ;
+    foaf:name "Wall" .
+
+ioi:ioi2014 a dbpedia-owl:Competition ;
+    dbpedia-owl:city dbpedia:Taipei ;
+    dbpedia-owl:country dbpedia:Taiwan ;
+    dbpedia-owl:endDate "2014-07-20"^^xsd:date ;
+    dbpedia-owl:homepage "http://www.ioi2014.org/" ;
+    dbpedia-owl:participant ioi:contestant6597,
+        ioi:contestant6604,
+        ioi:contestant6881 ;
+    dbpedia-owl:startDate "2014-07-13"^^xsd:date ;
+    dbpedia-owl:year 2014 ;
+    ioi-owl:task ioi:task138,
+        ioi:task139 ;
+    foaf:name "International Olympiad in Informatics 2014" .
+
+
